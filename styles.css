@@ -1,0 +1,167 @@
+:root {
+    --clr-primary: yellow;
+    --clr-secondary: #000;
+    --clr-white: #fff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+button {
+    cursor: pointer;
+}
+
+.navbar {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-color: var(--clr-secondary);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    text-transform: lowercase;
+    margin: 0 10px 0 50px;
+    color: var(--clr-white);
+}
+
+.navbar-brand span {
+    color: var(--clr-primary);
+}
+
+.logo-container {
+    background-color: var(--clr-primary);
+    padding: 2px 10px;
+    border-radius: 3px;
+    margin-right: 40px;
+}
+
+.logo {
+    color: var(--clr-secondary);
+}
+
+.filter {
+    width: 350px;
+    height: 37px;
+    border-radius: 3px;
+    padding: 5px;
+}
+
+.magnifier-button {
+    width: 35px;
+    height: 35px;
+    border: 0;
+    border-radius: 3px;
+    background-color: var(--clr-primary);
+}
+
+.bucket-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    position: absolute;
+    right: 50px;
+}
+
+.bucket-icon {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.bucket-container span {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--clr-white);
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 7fr;
+}
+
+.navigation-heading {
+    background-color: var(--clr-primary);
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.category {
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* if category is active */
+.active {
+    background-color: var(--clr-secondary);
+    color: var(--clr-primary);
+}
+
+.products-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 20px;
+    list-style: none;
+    row-gap: 80px;
+}
+
+.product {
+    text-align: center;
+    padding: 20px;
+}
+
+.product-content {
+    display: grid;
+    gap: 10px;
+}
+
+.product img {
+    margin: 0 auto;
+}
+
+.product-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.product-description {
+    color: grey;
+    max-width: 35ch;
+    margin: 0 auto;
+    display: inline-block;
+}
+
+.prices-container span {
+    margin: 5px;
+    font-weight: 600;
+}
+
+.basket-button {
+    width: 55%;
+    background-color: var(--clr-secondary);
+    color: var(--clr-white);
+    font-weight: bold;;
+    margin: 0 auto;
+    padding: 10px 0;
+    letter-spacing: 1px;
+}
+
+.basket-button:hover {
+    opacity: 0.8;
+}
+
+.clicked {
+    opacity: 0.6;
+}
+
