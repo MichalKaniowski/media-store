@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Media Shop</title>
+    <title>Media Store</title>
 
     <script
       src="https://kit.fontawesome.com/9ca2fe81e6.js"
@@ -14,7 +14,9 @@
   </head>
   <body>
     <nav class="navbar">
-      <strong class="navbar-brand"> <span>Media</span> Amator</strong>
+      <a href="/">
+        <strong class="navbar-brand"> <span>Media</span> Store</strong>
+      </a>
       <div class="logo-container">
         <i class="fa-solid fa-play logo"></i>
       </div>
@@ -32,25 +34,32 @@
         />
 
         <span>Koszyk</span>
+        <button class="empty-the-basket-button">x</button>
       </div>
     </nav>
 
+    <div class="input-div">
+      <input type="text" class="filter" placeholder="Search in shop" />
+    </div>
+
     <main>
       <aside class="navigation">
-        <div>
-          <p class="navigation-heading">Produkty</p>
+        <div class="categories">
+          <div>
+            <p class="navigation-heading">Produkty</p>
+          </div>
         </div>
-        <div class="category active">Wszystkie</div>
-        <div class="category">Iphone</div>
-        <div class="category">Huawei</div>
-        <div class="category">Nokia</div>
-        <div class="category">Samsung</div>
       </aside>
 
       <ul class="products-list"></ul>
     </main>
 
+    <div class="empty-state-container">
+      <h2 class="empty-state-heading">No products were found</h2>
+    </div>
+
+    <script type="module" src="utils.js"></script>
     <script type="module" src="products.js"></script>
-    <script type="module" src="app.js"></script>
+    <script type="module" src="main.js"></script>
   </body>
 </html>

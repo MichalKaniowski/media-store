@@ -1,3 +1,7 @@
-0. Finish design.
-1. Shuffle products and then display it bcs now they are sorted alphabetically and it's kinda weird for that type of website
-2. Add javascript stuff like filtering. 
+1. Refactor the code.
+
+Ideas to make on this side: 
+
+-Można wejśc w Koszyk
+-Mozna wejść w produkt po kliknięciu w niego otworzy sie strona tylko z tym produktem. 
+-Umieścć basket i basketAmount w localStorage.

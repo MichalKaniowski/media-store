@@ -14,8 +14,16 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+a {
+    text-decoration: none;
+}
+
 button {
     cursor: pointer;
+}
+
+.active {
+    display: block;
 }
 
 .navbar {
@@ -24,6 +32,7 @@ button {
     align-items: center;
     position: relative;
     background-color: var(--clr-secondary);
+    width: 100%;
 }
 
 .navbar-brand {
@@ -46,6 +55,11 @@ button {
 
 .logo {
     color: var(--clr-secondary);
+}
+
+.empty-state-heading {
+    text-align: center;
+    font-size: 1.7rem;
 }
 
 .filter {
@@ -83,9 +97,36 @@ button {
     color: var(--clr-white);
 }
 
+.empty-the-basket-button {
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    border: none;
+    font-size: 14px;
+    background-color: inherit;
+    color: yellow;
+    display: none;
+}
+
+.empty-the-basket-button.active {
+    display: block;
+}
+
+.input-div {
+    display: none;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    border: none;
+}
+
 main {
     display: grid;
-    grid-template-columns: 1fr 7fr;
+    grid-template-columns: 1fr;
+}
+
+.navigation {
+    text-align: center;
 }
 
 .navigation-heading {
@@ -99,30 +140,38 @@ main {
     text-align: center;
     padding: 10px;
     cursor: pointer;
+    display: inline-block;
 }
 
 /* if category is active */
-.active {
+.active-category {
     background-color: var(--clr-secondary);
     color: var(--clr-primary);
+    border-radius: 5px;
 }
 
 .products-list {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     padding: 20px;
     list-style: none;
     row-gap: 80px;
 }
+
 
 .product {
     text-align: center;
     padding: 20px;
 }
 
+.product:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;;
+}
+
 .product-content {
     display: grid;
     gap: 10px;
+    position: relative;
 }
 
 .product img {
@@ -147,6 +196,25 @@ main {
     font-weight: 600;
 }
 
+.regular-price {
+    position: relative;
+}
+
+.regular-price.price-not-active::before {
+    content: "";
+    width: 110%;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    right: -3%;
+    transform: rotate(-8deg);
+}
+
+.discounted-price {
+    color: green;
+}
+
 .basket-button {
     width: 55%;
     background-color: var(--clr-secondary);
@@ -165,3 +233,73 @@ main {
     opacity: 0.6;
 }
 
+.on-sale-banner {
+    background-color: var(--clr-secondary);
+    color: var(--clr-primary);
+    width: 35%;
+    padding: 5px;
+    position: absolute;
+    right: 15px;
+    border-radius: 3px;
+}
+
+@media only screen and (max-width: 1650px) {
+    .products-list {
+        grid-template-columns: 1fr 1fr 1fr;
+    }  
+}
+
+@media only screen and (max-width: 1250px) {
+    .products-list {
+        grid-template-columns: 1fr 1fr;
+    }  
+}
+
+@media only screen and (max-width: 800px) {
+    .products-list {
+        grid-template-columns: 1fr;
+    }  
+
+    .navbar input {
+        display: none;
+    }
+
+    .navbar button {
+        display: none;
+    }
+
+    .input-div {
+        display: inline-block;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    main {
+        grid-template-columns: 1fr 4fr;
+    }
+
+    .navigation {
+        padding: 0;
+    }
+
+    .category {
+        display: block;
+        border-radius: 0;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .navigation-heading {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .navbar-brand {
+        margin: 10px;
+    }
+
+    .bucket-container {
+        right: 10px;
+    }
+}
