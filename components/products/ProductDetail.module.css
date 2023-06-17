@@ -1,0 +1,138 @@
+.product-container {
+  padding: 4% 15%;
+}
+
+.product-content h1 {
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 4fr 5fr 3fr;
+}
+
+.column {
+  position: relative;
+}
+
+.column:nth-child(2) {
+  padding: 10px 0;
+  margin-left: -30px;
+}
+
+.product-image {
+  position: relative;
+  right: 10%;
+}
+
+.banners-container {
+  margin-bottom: 15px;
+}
+
+.banner-image {
+  margin: 0 auto;
+}
+
+.specification-row {
+  margin-bottom: 3px;
+}
+
+.specification-title {
+  color: rgb(75, 75, 75);
+  font-size: 1.05rem;
+  margin-bottom: 15px;
+  letter-spacing: 0.5px;
+}
+
+.specification-data {
+  font-weight: 500;
+  font-size: 1.05rem;
+}
+
+.add-to-cart-window {
+  padding: 25px;
+  margin-top: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  cursor: auto;
+  min-height: 300px;
+}
+
+.regular-price {
+  position: relative;
+  display: block;
+  max-width: 9ch;
+  font-size: 2.1rem;
+  font-weight: 500;
+}
+
+.regular-price.price-not-active {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.regular-price.price-not-active::before {
+  content: "";
+  width: 90%;
+  height: 2px;
+  background-color: var(--clr-secondary);
+  position: absolute;
+  top: 50%;
+  right: 15%;
+  transform: rotate(-8deg);
+}
+
+.discount-price {
+  display: block;
+  color: red;
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+.last-30-days-lowest-price {
+  font-size: 0.9rem;
+}
+
+.delivery-row {
+  display: flex;
+  align-items: center;
+}
+
+.delivery-row img {
+  margin-right: 5px;
+}
+
+.cart-button {
+  width: 80%;
+  padding: 15px 25px;
+  margin: 30px auto 0;
+  background-color: var(--clr-primary);
+  color: var(--clr-secondary);
+  font-weight: 500;
+  margin-top: 20px;
+  position: absolute;
+  bottom: 30px;
+}
+
+@media screen and (max-width: 1530px) {
+  .product-container {
+    padding: 4% 10%;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .row {
+    grid-template-columns: 3fr 2fr;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .row {
+    grid-template-columns: 1fr;
+    /* margin: 0 auto; */
+  }
+
+  .column:nth-child(2) {
+    margin: 0;
+  }
+}

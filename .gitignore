@@ -1,0 +1,9 @@
+node_modules/
+
+.next/
+
+*.txt
+
+.env
+
+.env.local

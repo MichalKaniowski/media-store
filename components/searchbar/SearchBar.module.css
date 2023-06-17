@@ -1,0 +1,53 @@
+.filter-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.filter-container.large .filter,
+.filter-container.large .magnifier-button {
+  display: inline-block;
+}
+
+.filter {
+  width: 100%;
+  width: 350px;
+  height: 37px;
+  border-radius: 3px;
+  padding: 5px;
+  display: none;
+}
+
+.magnifier-button {
+  border: 0;
+  border-radius: 3px;
+  background-color: var(--clr-primary);
+  padding: 8px;
+  display: none;
+  border: 1px solid #6e6e6e;
+}
+
+@media screen and (max-width: 800px) {
+  .filter-container.large .filter,
+  .filter-container.large .magnifier-button {
+    display: none;
+  }
+
+  .filter-container {
+    padding: 20px;
+  }
+
+  .filter {
+    display: inline-block;
+  }
+
+  .magnifier-button {
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .filter {
+    width: 250px;
+  }
+}
